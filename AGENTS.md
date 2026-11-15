@@ -1,6 +1,6 @@
 # AGENTS.md（入口）
 
-このリポジトリは、仕様書工房（Claude のプロジェクト）で仕様書を作るための道具と成果物を置く場所である。このファイルが入口で、ここからすべての文書へリンクでたどれる。
+このリポジトリは、仕様書工房（Claude のプロジェクト）で仕様書を作るための道具（テンプレート、手順、検証スクリプト）を置く場所である。仕様書そのものはここに置かない（Claude Docs で作り、プロジェクトのライブラリで管理する）。必要なテンプレートだけを、下の一覧から選んで読む。このファイルが入口で、ここからすべての文書へリンクでたどれる。
 
 ## 規則の正
 
@@ -21,15 +21,18 @@
 | [templates/sections/data.md](templates/sections/data.md) | 足す節 C：データ | 仕様書を作る人・AI |
 | [templates/sections/batch.md](templates/sections/batch.md) | 足す節 D：バッチ・外部連携 | 仕様書を作る人・AI |
 | [templates/sections/operations.md](templates/sections/operations.md) | 足す節 E：業務・運用手順 | 仕様書を作る人・AI |
+| [templates/sections/release.md](templates/sections/release.md) | 足す節 F：リリース・移行・運用 | 仕様書を作る人・AI |
+| [templates/sections/security.md](templates/sections/security.md) | 足す節 G：セキュリティ・個人情報 | 仕様書を作る人・AI |
+| [templates/requirement-patterns.md](templates/requirement-patterns.md) | 要件の文型（EARS）と確かめ方の種類 | 仕様書を作る人・AI |
+| [docs/references.md](docs/references.md) | テンプレートのもとにした外部の作法と出典 | テンプレートを直す人・AI |
 | [templates/hearing.md](templates/hearing.md) | 聞き取りの質問票 | 仕様書を作る人・AI |
 | [templates/review-request.md](templates/review-request.md) | レビュワーへの依頼文と指摘の記録 | 仕様書を作る人・AI |
-| [specs/README.md](specs/README.md) | 承認済みの仕様書の一覧 | 実装する人・AI、承認者 |
 | [tools/README.md](tools/README.md) | 検証スクリプトの使い方 | 仕様書を作る人・AI |
 | [README.md](README.md) | リポジトリの紹介 | 初めて来た人 |
 
 ## このリポジトリで作業する AI への決まり
 
 1. 文書を足したら、この文書一覧に行を足す。入口からたどれない文書は置かない。
-2. 承認済みの仕様書（`specs/` の下にあるものも、Claude Docs にあるものも）の要件の追加・削除・優先度の変更は、ユーザーの承認を得てから行う。
+2. 承認済みの仕様書（置き場所を問わない）の要件の追加・削除・優先度の変更は、ユーザーの承認を得てから行う。
 3. 変更したら `python3 tools/check_spec.py` を実行し、エラーが 0 件であることを確かめてから PR にする。
 4. 用語・要件は 1 か所にだけ書き、ほかからは要件 ID とリンクで参照する。

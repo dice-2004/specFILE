@@ -175,7 +175,7 @@ def main(argv):
     else:
         files = check_repo_links()
         targets = [p for p in files
-                   if p.parts[len(ROOT.parts)] in ("templates", "specs") and is_spec(p)]
+                   if p.parts[len(ROOT.parts)] in ("templates",) and is_spec(p)]
     for p in sorted(targets):
         state, n, tags = check_spec(p)
         print(f"{rel(p)}: 状態={state} 要件={n} 件 【未決】【仮定】={tags} か所")

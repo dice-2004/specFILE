@@ -5,7 +5,7 @@
 `check_spec.py` は、仕様書の形を機械的に確かめる。Python 3 だけで動き、追加のインストールは要らない。
 
 ```
-python3 tools/check_spec.py                # リポジトリ全体（リンク、入口からの到達、templates/ と specs/ の仕様書）
+python3 tools/check_spec.py                # リポジトリ全体（リンク、入口からの到達、templates/ の仕様書）
 python3 tools/check_spec.py path/to/spec.md # 指定した仕様書だけ
 ```
 
@@ -26,6 +26,8 @@ python3 tools/check_spec.py path/to/spec.md # 指定した仕様書だけ
 | 仕様書 | 承認済みなのに【未決: …】【仮定: …】が残っている | 警告（ユーザーが残すと決めたものは可） |
 
 エラーが 1 件でもあると終了コードが 1 になる。
+
+Claude Docs にある仕様書は、Markdown に書き出したファイルを指定して確かめる。
 
 ## 確かめないこと
 
